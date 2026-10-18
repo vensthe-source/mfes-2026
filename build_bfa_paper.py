@@ -119,7 +119,7 @@ refs = [
     "〔德〕H.R.姚斯，〔美〕R.C.霍拉勃．接受美学与接受理论[M]．周宁，金元浦，译．沈阳：辽宁人民出版社，1987．",
     "习近平．在文艺工作座谈会上的讲话（2014 年 10 月 15 日）[M]．北京：人民出版社，2015．",
     "全国人民代表大会常务委员会．中华人民共和国电影产业促进法[Z]．2017-03-01 施行．",
-    "豆瓣电影．豆瓣电影评分说明[EB/OL]．https://movie.douban.com/about（查询于 2026 年 10 月）．",
+    "豆瓣电影．豆瓣电影[EB/OL]．https://movie.douban.com/（查询于 2026 年 10 月）．",
     "British Film Institute. The Greatest Films of All Time: Sight and Sound 2022 Poll[EB/OL]. https://www.bfi.org.uk/sight-and-sound/greatest-films-all-time（查询于 2026 年 10 月）.",
     "Smith P C, Kendall L M. Retranslation of expectations: An approach to the construction of unambiguous anchors for rating scales[J]. Journal of Applied Psychology, 1963, 47(3): 149-155.",
     "Saaty T L. The Analytic Hierarchy Process[M]. New York: McGraw-Hill, 1980.",

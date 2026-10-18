@@ -84,17 +84,17 @@ def new_doc():
     sec.left_margin = sec.right_margin = Cm(2.6)
     return doc
 
-def cover(doc, subtitle):
+def cover(doc, subtitle, version=VERSION):
     heading(doc, "MFES-2026 电影多维评价体系", 0)
     heading(doc, subtitle, 0)
-    para(doc, "版本 %s · 2026 年 10 月" % VERSION, align="center", indent=False)
+    para(doc, "版本 %s · 2026 年 10 月" % version, align="center", indent=False)
     para(doc, "作者：%s（%s）" % (AUTHOR, AFFILIATION), align="center", indent=False, east="楷体")
     para(doc, "许可证：CC BY 4.0（署名 4.0 国际许可）", align="center", indent=False)
     para(doc, "本文件及配套评分手册、数据与工具构成 MFES-2026 的公开版本。", align="center", indent=False)
 
 # ================= 白皮书 =================
 doc = new_doc()
-cover(doc, "白皮书")
+cover(doc, "白皮书", version="v1.1")
 heading(doc, "一、定位与目的", 1)
 para(doc, "MFES-2026 是一套面向电影的多维加权评价体系，旨在为影片价值评价提供公开、可审计、可复算的工具。体系的定位是学术研究与行业参考工具：它为研究者提供跨影片比较的共同量表，为评奖、资助与社会效益考核提供可公开的评分细则草案，为国际传播选片提供测量基础。需要声明：v1.0 是研究者个人提出的学术方案，不构成任何官方标准；其全部规则公开，欢迎复核、质疑与修订建议。")
 heading(doc, "二、体系总纲：一体两翼", 1)
@@ -139,10 +139,14 @@ para(doc, "三点发现：其一，四片得分与公开口碑完全同序（856
 heading(doc, "九、限度声明", 1)
 para(doc, "本体系公开声明六项限度：其一，价值判断不可消除——权重与锚点的选择本身是价值承诺，体系只保证其可见与可挑战；其二，千分制总分必须与三轨剖面、置信区间同报，禁止脱离剖面引用总分；其三，锚定样例天然偏向已有范式，先锋作品须以“形式即内容”规则缓冲；其四，底线准入仅适用于评奖与资助序列，学术用途不设底线；其五，语境相对分牺牲跨时代通约，体系不用于“有史以来最佳影片”式排名；其六，个案试评不构成有效性证明，有效性有待大样本信度研究检验。")
 heading(doc, "十、版本与维护", 1)
-para(doc, "本文件为 v1.0（2026 年 10 月发布）。版本管理规则：每五年全面修订一次，重大修订须公示变更清单与理由；评分手册、权重表、试评数据与复算工具随版本同步更新。反馈与挑战请通过 GitHub 仓库 issue 提交（仓库地址见 README）。")
+para(doc, "本文件为 v1.1（2026 年 10 月发布，v1.0 于同月首发）。版本管理规则：每五年全面修订一次，重大修订须公示变更清单与理由；评分手册、权重表、试评数据与复算工具随版本同步更新。反馈与挑战请通过 GitHub 仓库（https://github.com/vensthe-source/mfes-2026）issue 提交。")
 heading(doc, "十一、引用格式", 1)
-para(doc, "%s. MFES-2026 电影多维评价体系：白皮书（%s）[R]. 北京：%s，2026." % (AUTHOR, VERSION, AFFILIATION), indent=False)
-doc.save(os.path.join(OUT, "白皮书_MFES-2026_v1.0.docx"))
+para(doc, "%s. MFES-2026 电影多维评价体系：白皮书（v1.1）[R]. 北京：%s，2026. https://github.com/vensthe-source/mfes-2026" % (AUTHOR, AFFILIATION), indent=False)
+para(doc, "配套论文：%s. 一体两翼：电影多维加权评价体系（MFES-2026）的科学建构与权重设计（v1.7）[R]. 北京：%s，2026." % (AUTHOR, AFFILIATION), indent=False)
+heading(doc, "十二、与论文的关系", 1)
+para(doc, "本白皮书是 MFES-2026 的快速概览文件；体系的完整论证、71 项指标细则、外部因素档案、主体性控制方法与全部引文（23 条参考文献、32 处正文标注，按 GB/T 7714 顺序编码制著录）见配套论文《一体两翼：电影多维加权评价体系（MFES-2026）的科学建构与权重设计》（v1.7）。两者内容同源；如存在表述差异，以论文为准。")
+
+doc.save(os.path.join(OUT, "白皮书_MFES-2026_v1.1.docx"))
 print("saved 白皮书")
 
 # ================= 评分手册 =================
